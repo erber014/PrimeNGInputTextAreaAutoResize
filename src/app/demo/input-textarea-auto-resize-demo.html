@@ -1,0 +1,48 @@
+<div class="card flex justify-content-center">
+  <p-button (click)="sidebarVisible = !sidebarVisible">Click me!</p-button>
+</div>
+<p-sidebar
+  position="left"
+  [modal]="false"
+  styleClass="w-full"
+  [(visible)]="sidebarVisible"
+>
+  <ng-template pTemplate="content">
+    <div class="card flex justify-content-center h-30rem">1</div>
+    <div class="card flex justify-content-center h-30rem">2</div>
+    <div class="card flex justify-content-center h-30rem">3</div>
+    <div class="card flex justify-content-center h-30rem">4</div>
+    <div class="card flex justify-content-center h-30rem">5</div>
+    <div class="card flex justify-content-center h-30rem">6</div>
+    <div class="card flex justify-content-center h-30rem">
+      Click the button then scroll below text area and click on a div or the
+      button at the bottom!
+    </div>
+    <p-button (click)="printToConsole()">Click me!</p-button>
+    <div class="card flex justify-content-center h-30rem">
+      Or click in the text area then scroll below it and click on a div or the
+      button at the bottom!
+    </div>
+    <div class="card flex justify-content-center">
+      <textarea
+        rows="50"
+        [ngModel]="text"
+        cols="30"
+        [autoResize]="true"
+        pInputTextarea
+      ></textarea>
+    </div>
+    <div class="card flex justify-content-center h-30rem">
+      The bottom button will not have its click event fire, we will scroll up
+      instead, which is annoying.
+    </div>
+    <div class="card flex justify-content-center h-30rem">7</div>
+    <div class="card flex justify-content-center h-30rem">8</div>
+    <div class="card flex justify-content-center h-30rem">9</div>
+    <div class="card flex justify-content-center h-30rem">10</div>
+    <div class="card flex justify-content-center h-30rem">11</div>
+    <p-button (click)="printToConsole()"
+      >Try clicking me after following above instructions!</p-button
+    >
+  </ng-template>
+</p-sidebar>
